@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JPMS-App.iml" filepath="$PROJECT_DIR$/JPMS-App.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.github.itsAkshayDubey.jpmsapp/com.github.itsAkshayDubey.jpmsapp.iml" filepath="$PROJECT_DIR$/com.github.itsAkshayDubey.jpmsapp/com.github.itsAkshayDubey.jpmsapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.github.itsAkshayDubey.jpmsserver/com.github.itsAkshayDubey.jpmsserver.iml" filepath="$PROJECT_DIR$/com.github.itsAkshayDubey.jpmsserver/com.github.itsAkshayDubey.jpmsserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.github.itsAkshayDubey.jpmsserver.serverone/com.github.itsAkshayDubey.jpmsserver.serverone.iml" filepath="$PROJECT_DIR$/com.github.itsAkshayDubey.jpmsserver.serverone/com.github.itsAkshayDubey.jpmsserver.serverone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.github.itsAkshayDubey.jpmsserver.servertwo/com.github.itsAkshayDubey.jpmsserver.servertwo.iml" filepath="$PROJECT_DIR$/com.github.itsAkshayDubey.jpmsserver.servertwo/com.github.itsAkshayDubey.jpmsserver.servertwo.iml" />
+    </modules>
+  </component>
+</project>
