@@ -3,7 +3,7 @@
 Purpose of this repository is demonstrate the working of modular java application, here the abbreviation JPMS stands for Java Platform Module System and was introduced in Java 9.0.
 
 ## Project Structure
-This contains three modules as below:
+This contains four modules as below:
 - JPMSApp Module: contains a single package and main class for the application. This module as all the below three modules as its dependencies.
 - JPMSServer Module: is an interface.
 - JPMSServerOne: implements JPMSServer interface and requires JPMSServer module as its dependency. This module also contains some internal packages which are not exposed to the outside world namely, the internal package which contains the Filter class - used internally.
