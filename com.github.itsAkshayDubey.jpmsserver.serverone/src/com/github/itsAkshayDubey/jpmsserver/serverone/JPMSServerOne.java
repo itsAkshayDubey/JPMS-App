@@ -28,7 +28,7 @@ public class JPMSServerOne implements JPMSServer {
     public void checkStatus() {
         System.out.println("-------------------------------------------------");
         Filter filter = new ServerOneFilter(this.getServerName());
-        System.out.println("Checking . . .");
+        System.out.println("Checking "+this.serverName+". . .");
         try {
             if(filter.filter())
                 System.out.println(this.serverName+" is up and running.");
