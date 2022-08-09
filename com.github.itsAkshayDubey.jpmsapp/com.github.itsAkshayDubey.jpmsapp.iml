@@ -7,5 +7,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="com.github.itsAkshayDubey.jpmsserver" />
+    <orderEntry type="module" module-name="com.github.itsAkshayDubey.jpmsserver.serverone" />
+    <orderEntry type="module" module-name="com.github.itsAkshayDubey.jpmsserver.servertwo" />
   </component>
 </module>
