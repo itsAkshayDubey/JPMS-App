@@ -8,8 +8,8 @@ public class JPMSApp {
 
     public static void main(String[] args) {
 
-        JPMSServer serverOne = new JPMSServerOne();
-        JPMSServer serverTwo = new JPMSServerTwo();
+        JPMSServer serverOne = new JPMSServerOne("hypothetical-dc-1-server-1");
+        JPMSServer serverTwo = new JPMSServerTwo("hypothetical-dc-1-server-2");
         serverOne.checkStatus();
         serverTwo.checkStatus();
 
