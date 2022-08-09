@@ -6,13 +6,27 @@ import com.github.itsAkshayDubey.jpmsserver.servertwo.filter.ServerTwoFilter;
 
 public class JPMSServerTwo implements JPMSServer {
 
-    Filter filter = new ServerTwoFilter();
+    private String serverName;
+
+    public String getServerName() {
+        return serverName;
+    }
+
+    public JPMSServerTwo(String serverName) {
+        this.serverName = serverName;
+    }
+
+    public void setServerName(String serverName) {
+        this.serverName = serverName;
+    }
+
+    Filter filter = new ServerTwoFilter(this.serverName);
     @Override
     public void checkStatus() {
 
         System.out.println("Checking . . .");
         filter.filter();
-        System.out.println("Server two is up and running.");
+        System.out.println(this.serverName+" is up and running.");
 
     }
 }
