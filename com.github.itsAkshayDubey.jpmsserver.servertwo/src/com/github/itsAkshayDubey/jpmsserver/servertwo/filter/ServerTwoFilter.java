@@ -1,6 +1,10 @@
 package com.github.itsAkshayDubey.jpmsserver.servertwo.filter;
 
 import com.github.itsAkshayDubey.jpmsserver.filter.Filter;
+import com.github.itsAkshayDubey.jpmsserver.randomizer.TimeGenerator;
+import com.github.itsAkshayDubey.jpmsserver.randomizer.BooleanGenerator;
+
+import java.util.Random;
 
 public class ServerTwoFilter implements Filter {
 
@@ -19,7 +23,10 @@ public class ServerTwoFilter implements Filter {
     }
 
     @Override
-    public void filter() {
+    public boolean filter() throws InterruptedException {
+
         System.out.println("Applying filter for "+this.serverName+"...");
+        Thread.sleep(TimeGenerator.getTime());
+        return BooleanGenerator.getBoolean();
     }
 }

@@ -1,6 +1,8 @@
 package com.github.itsAkshayDubey.jpmsserver.serverone.internal;
 
 import com.github.itsAkshayDubey.jpmsserver.filter.Filter;
+import com.github.itsAkshayDubey.jpmsserver.randomizer.BooleanGenerator;
+import com.github.itsAkshayDubey.jpmsserver.randomizer.TimeGenerator;
 
 public class ServerOneFilter implements Filter{
 
@@ -18,8 +20,11 @@ public class ServerOneFilter implements Filter{
         this.serverName = serverName;
     }
 
-    public void filter(){
-        System.out.println("Applying filter for "+ this.serverName+"...");
+    public boolean filter() throws InterruptedException {
+        System.out.println("Applying filter for "+this.serverName+"...");
+        Thread.sleep(TimeGenerator.getTime());
+        return BooleanGenerator.getBoolean();
+
     }
 
 }

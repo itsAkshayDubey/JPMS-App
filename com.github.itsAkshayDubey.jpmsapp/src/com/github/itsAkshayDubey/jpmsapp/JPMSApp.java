@@ -6,7 +6,7 @@ import com.github.itsAkshayDubey.jpmsserver.servertwo.JPMSServerTwo;
 
 public class JPMSApp {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         JPMSServer serverOne = new JPMSServerOne("hypothetical-dc-1-server-1");
         JPMSServer serverTwo = new JPMSServerTwo("hypothetical-dc-1-server-2");

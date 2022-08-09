@@ -6,6 +6,7 @@ import com.github.itsAkshayDubey.jpmsserver.serverone.internal.ServerOneFilter;
 import com.github.itsAkshayDubey.jpmsserver.serverone.internal.ServerOneFilter;
 
 public class JPMSServerOne implements JPMSServer {
+    private static final System.Logger LOGGER = System.getLogger("JPMSSeverOne");
 
     private String serverName;
 
@@ -21,12 +22,21 @@ public class JPMSServerOne implements JPMSServer {
         this.serverName = serverName;
     }
 
-    Filter filter = new ServerOneFilter(this.serverName);
+
 
     @Override
     public void checkStatus() {
+        System.out.println("-------------------------------------------------");
+        Filter filter = new ServerOneFilter(this.getServerName());
         System.out.println("Checking . . .");
-        filter.filter();
-        System.out.println(this.serverName+" is up and running.");
+        try {
+            if(filter.filter())
+                System.out.println(this.serverName+" is up and running.");
+            else
+                System.out.println(this.serverName+" is down.");
+        } catch (InterruptedException e) {
+            LOGGER.log(System.Logger.Level.ERROR,e.getMessage());
+        }
+        System.out.println("-------------------------------------------------");
     }
 }
