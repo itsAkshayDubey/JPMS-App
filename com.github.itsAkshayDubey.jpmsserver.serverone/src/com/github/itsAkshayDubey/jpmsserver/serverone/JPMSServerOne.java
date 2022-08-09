@@ -7,12 +7,26 @@ import com.github.itsAkshayDubey.jpmsserver.serverone.internal.ServerOneFilter;
 
 public class JPMSServerOne implements JPMSServer {
 
-    Filter filter = new ServerOneFilter();
+    private String serverName;
+
+    public String getServerName() {
+        return serverName;
+    }
+
+    public void setServerName(String serverName) {
+        this.serverName = serverName;
+    }
+
+    public JPMSServerOne(String serverName) {
+        this.serverName = serverName;
+    }
+
+    Filter filter = new ServerOneFilter(this.serverName);
 
     @Override
     public void checkStatus() {
         System.out.println("Checking . . .");
         filter.filter();
-        System.out.println("Server one is up and running.");
+        System.out.println(this.serverName+" is up and running.");
     }
 }
